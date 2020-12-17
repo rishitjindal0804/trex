@@ -36,7 +36,7 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
-  trex = createSprite(50,height-600,20,50);
+  trex = createSprite(50,height-650,20,50);
   
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collided);
@@ -77,7 +77,7 @@ function draw() {
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6 + 3*score/100);
   
-    if  ((touches.length>0||keyDown("space")) && trex.y >= 169) {
+    if  ((touches.length>0||keyDown("space")) && trex.y >= 179) {
       trex.velocityY = -12;
       touches=[];
     }
